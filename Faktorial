@@ -29,10 +29,17 @@ public class Faktorial {
             int angka=Integer.parseInt(br.readLine());
             int total=1;
             int j=angka;
+            System.out.print("sample : "+angka+"! = ");
             for(int i=0;i<angka;i++){
                 total=total*j;
+                if(j==1){
+                  System.out.print(j);  
+                }else{
+                    System.out.print(j+" x ");
+                }
                 j--;
             }
+            System.out.println("");
             System.out.println("Output : "+total);
         } catch (IOException ex) {
             Logger.getLogger(Faktorial.class.getName()).log(Level.SEVERE, null, ex);
